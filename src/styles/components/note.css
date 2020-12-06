@@ -1,0 +1,28 @@
+.note{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background-color: var(--sidebar-color);
+    color: var( --font-dummy-colors);
+    border-radius: 5px;
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.note hr{
+    border: 1px solid var(--line-color);
+}
+
+.note-title{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.note-body{
+    font-size: 2rem;
+}
+
+.note-controls{
+    display: flex;
+    justify-content: space-around;
+}

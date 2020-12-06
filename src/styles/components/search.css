@@ -1,0 +1,35 @@
+.search-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    
+}
+
+.search-container form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    margin-top: 10px;
+    background-color: var(--sidebar-color);
+    border-radius: 5px;
+}
+
+.search-container form input{
+    width: 95%;
+    height: 30px;
+    font-size: 25px;
+    padding: 0 5px;
+    border: none;
+    outline: none;
+    background-color: var(--line-color);
+    border-radius: 5px;
+    color: var(--font-dummy-colors);
+    
+}
+
+.search-container form input::placeholder{
+    color: var(--font-dummy-colors);
+}

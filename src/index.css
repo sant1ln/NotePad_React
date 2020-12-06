@@ -1,5 +1,18 @@
+:root{
+    --sidebar-color:  #e24949;
+    --button-create : #fffdfd;
+    --button-create-hover : #c28787;
+    --line-color: #f37676;
+    --font-dummy-colors : #fffdfd;
+    --dummy-hover: #f37676;
+}
+
+
+
 *{
     margin: 0;
     padding: 0;
-    color: white
+    font-size: 65.5%;
+    font-family: 'Palanquin', sans-serif;
 }
+

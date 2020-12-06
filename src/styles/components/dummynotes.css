@@ -1,0 +1,18 @@
+.dummy-container{
+    width: 65%;
+    padding: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all .5s;
+}
+
+.dummy-container h4{
+    color: var(--font-dummy-colors);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.dummy-container:hover{
+    background-color: var(--dummy-hover);
+}
