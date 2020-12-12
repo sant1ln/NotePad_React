@@ -1,22 +1,22 @@
 import React from 'react'
 import '../styles/components/note.css'
-export const Note = () => {
+export const Note = ({title,body}) => {
     return (
         <div className="note">
             <div className="note-title">
-                <h2>Note title</h2>
+                <h2>{title}</h2>
             </div>
             <hr/>
             <div className="note-body">
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    {body}
                 </p>
             </div>
             <hr/>
             <div className="note-controls">
-                <smal>Edit</smal>
-                <smal>Delete</smal>
-                <smal>Share</smal>
+                <p>Edit</p>
+                <p>Delete</p>
+                <p>Share</p>
             </div>
         </div>
     )

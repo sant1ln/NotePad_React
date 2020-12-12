@@ -1,0 +1,5 @@
+.ListNotes-create{
+    width: 40%;
+    font-size: 2rem;
+    background-color: var(--sidebar-color);
+}

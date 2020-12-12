@@ -1,10 +1,10 @@
 import React from 'react'
 import '../styles/components/dummynotes.css'
 
-export const DummyNotes = () => {
+export const DummyNotes = ({title}) => {
     return (
         <div className="dummy-container">
-            <h4>i´m a note</h4>
+            <h4>{title}</h4>
         </div>
     )
 }
