@@ -9,6 +9,7 @@ function App() {
     id:12315145,
     body: 'Body text',
     title: 'title',
+    win: true
   }])
 
   return (

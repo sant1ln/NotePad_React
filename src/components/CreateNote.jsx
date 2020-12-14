@@ -1,16 +1,20 @@
 import React from 'react'
 import '../styles/components/createnote.css'
-export const CreateNote = () => {
+export const CreateNote = ({toggleWindow}) => {
+    
     return (
         <div className="ListNotes-create">
-            <form action="">
-                <input type="text" 
-                placeholder="title-note"/>
+            <form  className="form-create" action="">
+                <div className="form-create-input">
+                    <input type="text" 
+                    placeholder="title-note"/>
+                    <i onClick={toggleWindow} class="far fa-window-close exit"></i>
+                </div>
                 <hr/>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="" id="" cols="30" rows="10"/>
                 <div className="ListNotes-create-buttons">
-                    <button>Create</button>  
-                    <button>Delete</button>
+                    <button className="create">Create</button>  
+                    <button className="delete">Delete</button>
                 </div>
             </form>
       </div>

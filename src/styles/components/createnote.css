@@ -1,5 +1,101 @@
 .ListNotes-create{
-    width: 40%;
-    font-size: 2rem;
+    width: 45%;
+    height: 380px;
+    font-size: 3rem;
     background-color: var(--sidebar-color);
+    padding: 10px;
+    position: absolute;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.form-create{
+    width: 100%;
+    height: 100%;
+}
+
+
+.form-create-input{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-create-input button{
+    width: 10%;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.exit{
+    font-size: 3.5rem;
+    color: var(--font-dummy-colors);
+    cursor: pointer;
+}
+
+.form-create-input input{
+    width: 80%;
+    height: 100%;
+    border: none;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 1.7rem;
+}
+
+.form-create hr{
+    width: 90%;
+}
+
+.form-create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.form-create textarea{
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 90%;
+    resize: none;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 5px;
+}
+
+.ListNotes-create-buttons{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ListNotes-create-buttons button{
+    width: 30%;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.create{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.create:hover{
+    background-color: rgba(255, 255, 255, .05);
+}
+
+.delete{
+    color: white;
+    background-color: var(--button-option);
+    border: none;
+}
+
+.delete:hover{
+    background-color: #000;
 }

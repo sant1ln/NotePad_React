@@ -7,22 +7,28 @@ import { Note } from "./Note";
 
 export const ListOfNotes = () => {
     
+  /* const [toggleWin, setToggleWin] = useState(true) */
+  
+  const {state,setState} = useContext(CardContext)
+  
 
-
-  const {state} = useContext(CardContext)
-  console.log(state)
+  const toggleWindow = () =>{
+    setState([{
+      ...state,
+      win: false,
+    }])
+  }
   
   return (
     <div className="ListNotes">
-      <CreateNote />
-      <div className="ListNotes-notes">
+      {state[0].win && <CreateNote toggleWindow={toggleWindow} />}
         {state.map(note=>(
           <Note key={note.id}
           title={note.title}
           body={note.body}
           />
         ))}
-      </div>
+      
     </div>
   );
 };
