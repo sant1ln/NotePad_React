@@ -4,9 +4,10 @@
     --button-create-hover : #c28787;
     --line-color: #f37676;
     --font-dummy-colors : #fffdfd;
-    --dummy-hover: #f37676;
+    --dummy-hover:  rgba(0,0,0, 0.8);
     --button-option: #1c1c1c;
     --button-option-hover: rgba(0, 0, 0, .1);
+    --inputs-colors-one: rgba(0,0,0, 0.8)
 }
 
 

@@ -1,6 +1,6 @@
 .ListNotes-create{
     width: 45%;
-    height: 380px;
+    height: 400px;
     font-size: 3rem;
     background-color: var(--sidebar-color);
     padding: 10px;
@@ -39,7 +39,8 @@
     width: 80%;
     height: 100%;
     border: none;
-    background-color: rgba(255, 255, 255, .8);
+    background-color: var(--inputs-colors-one);
+    color: white;
     border-radius: 5px;
     padding: 0 10px;
     font-size: 1.7rem;
@@ -60,12 +61,33 @@
 .form-create textarea{
     border: none;
     outline: none;
-    padding: 10px;
+    padding: 5px;
+    font-size: 1.6rem;
     width: 90%;
+    height: 70%;
+    overflow: scroll;
+    overflow-x: hidden;
+    
     resize: none;
-    background-color: rgba(255, 255, 255, .8);
+    background-color: var(--inputs-colors-one);
+    color: white;
     border-radius: 5px;
 }
+
+.form-create textarea::-webkit-scrollbar{
+   -webkit-appearance: none;
+   width: 5px;
+   margin-right: 5px;
+}
+
+.form-create textarea::-webkit-scrollbar-thumb {
+    background-color: white;
+    height: 1px;
+    border-radius: 20px;
+    border: none
+}
+
+
 
 .ListNotes-create-buttons{
     width: 80%;

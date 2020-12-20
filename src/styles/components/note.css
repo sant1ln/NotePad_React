@@ -7,6 +7,12 @@
     border-radius: 5px;
     padding: 0 10px;
     margin: 0 10px;
+    cursor: pointer;
+    transition: .6s all;
+}
+
+.note:hover{
+    background-color: rgba(0,0,0, 0.8);
 }
 
 .note hr{

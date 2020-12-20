@@ -4,7 +4,10 @@ import '../styles/components/sidebar.css'
 import { useData } from '../Hooks/useData'
 
 export const Sidebar = () => {
-    const {state,createNote} = useData()
+    const {state,toggleWindow} = useData() 
+    const {cart} = state
+    
+   /*  const {state} = cart */
     return (
         <div className="sidebar">
             <div className="sidebar-title">
@@ -12,18 +15,21 @@ export const Sidebar = () => {
             </div>
             <div className="sidebar-control">
                 <button 
-                onClick={createNote}
+                onClick={toggleWindow}
                 className="sidebar-control-btn">
                     <h3>Create note +</h3></button>
                 <hr/>
             </div>
             <div className="sidebar-notes">
+               
                 {
-                    state.map(({id,title}) =>(
-                        <DummyNotes
-                            key={id}
-                            title={title}
-                        />
+                   
+                    cart.map(({id,title}) =>(
+                        <div key={id}>
+                            <DummyNotes
+                                title={title}
+                            />
+                        </div>
                     ))
                 }
                 

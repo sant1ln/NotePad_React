@@ -2,28 +2,45 @@ import {useContext} from 'react'
 import { CardContext } from '../Context/CardContext'
 //import initialState from '../initialState'
 export const useData = () =>{
-
+       
     
+    const {state,dispatch} = useContext(CardContext)  
+    const {win} = state
     
-    const {state,setState} = useContext(CardContext)  
+    const createNewNote = (data) =>{
+       let idMaker = Math.round(Math.random()*5000)
+       
+       dispatch({
+           type: 'CREATE_NOTE',
+           payload:{
+               ...data,
+               id:idMaker,
+               
+           }
+       })
+    }
 
-   // const id = Math.floor(Math.random() *5000)+1
-    const createNote = () =>{
-        let id = state[0].id + 5
-        setState([
-            {
-                id: id,
-                body: 'Body text',
-                title: 'title',
-                win: true,
-            },
-            ...state
-        ])      
-        
+    const toggleWindow = () =>{
+        dispatch({
+            type: 'TOGGLE_WINDOW',
+            payload:{
+                win: !win,
+                actual: 'create' 
+            }
+        })
+    }
+
+    const showNote = (title,body) =>{
+        dispatch({
+            type: 'SHOW_NOTE',
+            payload: {title,body} 
+        })
     }
     
     return{
-        createNote,
+        toggleWindow,
+        createNewNote,
+        showNote,
         state,
     }
 
