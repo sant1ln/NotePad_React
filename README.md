@@ -1,5 +1,4 @@
-# Landing Page Weibo food
+# Notepad
 
-### This is a website project for a fictional restaurant called "Weibo food"
+### This is a Notepad app made with React, using React Context
 
-~Weibo is the brand of my keyboard ahah
