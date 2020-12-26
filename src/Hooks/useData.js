@@ -2,8 +2,7 @@ import {useContext} from 'react'
 import { CardContext } from '../Context/CardContext'
 //import initialState from '../initialState'
 export const useData = () =>{
-       
-    
+           
     const {state,dispatch} = useContext(CardContext)  
     const {win} = state
     
@@ -30,17 +29,28 @@ export const useData = () =>{
         })
     }
 
-    const showNote = (title,body) =>{
+    const showNote = (title,body,id) =>{
         dispatch({
             type: 'SHOW_NOTE',
-            payload: {title,body} 
+            payload: {title,body,id} 
         })
     }
+
+    const editNote = (data) =>{
+        dispatch({
+            type: 'EDIT_NOTE',
+            payload:{
+                ...data
+            }
+        })
+    }
+
     
     return{
         toggleWindow,
         createNewNote,
         showNote,
+        editNote,
         state,
     }
 

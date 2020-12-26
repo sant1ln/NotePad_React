@@ -1,51 +1,62 @@
-import React from 'react'
-import { useData } from '../Hooks/useData'
-import { useForm } from '../Hooks/useForm'
-import '../styles/components/createnote.css'
-export const CreateNote = ({titleNote,bodyNote,showingNote}) => {
-    
-    const {createNewNote,toggleWindow} = useData()
-    
-    const initialState = {
-        title: titleNote ||'New note',
-        body: bodyNote || 'This is a body of a super note!'
-    }
+import React from "react";
+import { useData } from "../Hooks/useData";
+import { useForm } from "../Hooks/useForm";
+import "../styles/components/createnote.css";
+export const CreateNote = ({ titleNote, bodyNote, showingNote,id }) => {
+  const { createNewNote, editNote, toggleWindow } = useData();
 
-    const buttonValue = showingNote ? 'Edit' : 'Create'
+  const initialState = {
+    title: titleNote || "New note",
+    body: bodyNote || "This is a body of a super note!",
+  };
 
-    const [formValues, handleInputChange] = useForm(initialState)
+  const [formValues, handleInputChange] = useForm(initialState);
 
-    const {title,body} = formValues
+  const { title, body } = formValues;
 
-    const createNote = (e) =>{
-        e.preventDefault()
-        createNewNote(formValues)
-    }
-    
-    return (
-        <div className="ListNotes-create">
-            <form  className="form-create" onSubmit={createNote}>
-                <div className="form-create-input">
-                    <input type="text" 
-                    name="title"
-                    placeholder="title-note"
-                    onChange={handleInputChange}
-                    value={title}
-                    />
-                    <i onClick={toggleWindow} className="far fa-window-close exit"></i>
-                </div>
-                <hr/>
-                <textarea 
-                    name="body"
-                    onChange={handleInputChange}
-                    value={body} 
-                    
-                    />
-                <div className="ListNotes-create-buttons">
-                    <button type="submit" className="create">{buttonValue}</button>  
-                    {showingNote && <button className="delete">Delete</button>}
-                </div>
-            </form>
-      </div>
-    )
-}
+  const createNote = () => {
+     createNewNote(formValues);
+  };
+
+  const edit = () =>{
+      /* editNote({...formValues,id}) */
+  }
+
+  return (
+    <div className="ListNotes-create">
+      <form className="form-create" >
+        <div className="form-create-input">
+          <input
+            type="text"
+            name="title"
+            placeholder="title-note"
+            onChange={handleInputChange}
+            value={title}
+          />
+          <i onClick={toggleWindow} className="far fa-window-close exit"></i>
+        </div>
+        <hr />
+        <textarea name="body" onChange={handleInputChange} value={body} />
+        <div className="ListNotes-create-buttons">
+
+          
+          {!showingNote && (
+            <button type="button" className="create" onClick={createNote}>
+            Create
+            </button>
+          )}
+          {showingNote && (
+            <button type="button" className="create"  onClick={edit}>
+              Edit
+            </button>
+          )}
+          {showingNote && (
+            <button className="delete" type="button">
+              Delete
+            </button>
+          )}
+        </div>
+      </form>
+    </div>
+  );
+};
