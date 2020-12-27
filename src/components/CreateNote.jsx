@@ -3,7 +3,7 @@ import { useData } from "../Hooks/useData";
 import { useForm } from "../Hooks/useForm";
 import "../styles/components/createnote.css";
 export const CreateNote = ({ titleNote, bodyNote, showingNote,id }) => {
-  const { createNewNote, editNote, toggleWindow } = useData();
+  const { createNewNote, editNote, toggleWindow,deleteNote } = useData();
 
   const initialState = {
     title: titleNote || "New note",
@@ -19,7 +19,11 @@ export const CreateNote = ({ titleNote, bodyNote, showingNote,id }) => {
   };
 
   const edit = () =>{
-      /* editNote({...formValues,id}) */
+      editNote({...formValues,id})
+  }
+
+  const deleteActualNote = () =>{
+    deleteNote(id)
   }
 
   return (
@@ -51,7 +55,7 @@ export const CreateNote = ({ titleNote, bodyNote, showingNote,id }) => {
             </button>
           )}
           {showingNote && (
-            <button className="delete" type="button">
+            <button type="button" className="delete" onClick={deleteActualNote}>
               Delete
             </button>
           )}

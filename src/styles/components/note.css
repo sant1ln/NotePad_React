@@ -1,14 +1,20 @@
 .note{
     display: flex;
     flex-direction: column;
-    width: 25%;
+    min-width: 25%;
+    max-width: 25%;
+    min-height: 170px;
     background-color: var(--sidebar-color);
     color: var( --font-dummy-colors);
     border-radius: 5px;
     padding: 0 10px;
-    margin: 0 10px;
+    margin: -5px 10px;
     cursor: pointer;
     transition: .6s all;
+    -webkit-box-shadow: -11px 7px 9px -3px rgba(0,0,0,0.32);
+    -moz-box-shadow: -11px 7px 9px -3px rgba(0,0,0,0.32);   
+    box-shadow: -11px 7px 9px -3px rgba(0,0,0,0.32);
+    transition: .5s all;
 }
 
 .note:hover{
@@ -26,6 +32,7 @@
 
 .note-body{
     font-size: 2rem;
+    font-weight: 400;
 }
 
 .note-controls{

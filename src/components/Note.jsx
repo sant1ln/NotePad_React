@@ -14,7 +14,7 @@ export const Note = ({title,body,id}) => {
                     {body}
                 </p>
             </div>
-            <hr/>
+            
             {/* <div className="note-controls">
                 <p>Edit</p>
                 <p>Delete</p>

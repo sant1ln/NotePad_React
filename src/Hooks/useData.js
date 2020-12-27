@@ -5,7 +5,7 @@ export const useData = () =>{
            
     const {state,dispatch} = useContext(CardContext)  
     const {win} = state
-    
+    const actualState = state.actual;
     const createNewNote = (data) =>{
        let idMaker = Math.round(Math.random()*5000)
        
@@ -45,12 +45,23 @@ export const useData = () =>{
         })
     }
 
+    const deleteNote = (id) =>{
+        console.log(id)
+        dispatch({
+            type: 'DELETE_NOTE',
+            payload:{
+                id
+            }
+        })
+    }
     
     return{
         toggleWindow,
         createNewNote,
         showNote,
         editNote,
+        deleteNote,
+        actualState,
         state,
     }
 

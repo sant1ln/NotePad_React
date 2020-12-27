@@ -1,5 +1,5 @@
 export default{
-  notes:[
+  cart:[
     {
 		"id": "7F91AA0C-3EC5-ACFF-F7E4-720D443702C8",
 		"title": "Nulla Vulputate Dui Corporation",
@@ -45,5 +45,8 @@ export default{
 		"title": "Non Inc.",
 		"body": "Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla est. Mauris eu turpis. Nulla aliquet. Proin velit. Sed malesuada augue ut lacus. Nulla"
 	},
-  ]
+  ],
+  temporal: [],
+  win: false,
+  actual: 'hide'
 }
