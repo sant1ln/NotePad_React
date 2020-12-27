@@ -6,7 +6,18 @@
     margin: 0;
     height: 100vh;
     background-color: var(--sidebar-color);
+    overflow: scroll;
+    overflow-x: hidden;
 }
+
+.sidebar::-webkit-scrollbar{
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+    background-color: black;
+}
+
 
 .sidebar-title{
     font-size: 5rem;

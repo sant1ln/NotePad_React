@@ -1,4 +1,4 @@
-export default{
+export const initialState = {
   cart:[
     {
 		"id": "7F91AA0C-3EC5-ACFF-F7E4-720D443702C8",
@@ -15,6 +15,7 @@ export default{
 		"title": "Malesuada Institute",
 		"body": "malesuada malesuada. Integer id"
 	},
+	
 	{
 		"id": "A48F621C-93DE-A349-3FC6-5F21EDF2D6F7",
 		"title": "Lobortis Incorporated",
@@ -45,7 +46,8 @@ export default{
 		"title": "Non Inc.",
 		"body": "Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla est. Mauris eu turpis. Nulla aliquet. Proin velit. Sed malesuada augue ut lacus. Nulla"
 	},
-  ],
+  ],/* 
+  cart:[], */
   temporal: [],
   win: false,
   actual: 'hide'

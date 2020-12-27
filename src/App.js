@@ -2,8 +2,7 @@ import {useReducer} from 'react';
 import {Route,BrowserRouter,Switch} from 'react-router-dom'
 import { Home } from './containers/Home';
 import {CardContext} from './Context/CardContext.js'
-import { useData } from './Hooks/useData';
-import initialState from './initialState';
+import {initialState} from './initialState';
 import { cartsReducer } from './Reducer/cartsReducer';
 
 function App() {

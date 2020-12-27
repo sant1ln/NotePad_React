@@ -6,6 +6,7 @@
     background-color: transparent;
     transition: all .5s;
     margin-bottom: 5px;
+   
 }
 
 .dummy-container h4{
@@ -15,5 +16,5 @@
 }
 
 .dummy-container:hover{
-    background-color: var(--dummy-hover);
+    background-color: rgba(0, 0, 0, 0.486);
 }

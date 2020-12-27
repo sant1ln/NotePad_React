@@ -13,7 +13,7 @@ export const Home = () => {
       <div className={`${(actualState === 'showing')? 'overide' : ''}`}></div>
       <Sidebar />
       <div className="main-content">
-        <Search />
+        {/* <Search /> */}
         <div className="main-content-list">
           <ListOfNotes />
         </div>

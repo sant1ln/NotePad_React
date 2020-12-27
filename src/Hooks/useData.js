@@ -46,7 +46,6 @@ export const useData = () =>{
     }
 
     const deleteNote = (id) =>{
-        console.log(id)
         dispatch({
             type: 'DELETE_NOTE',
             payload:{

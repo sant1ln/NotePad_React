@@ -8,7 +8,7 @@
     color: var( --font-dummy-colors);
     border-radius: 5px;
     padding: 0 10px;
-    margin: -5px 10px;
+    margin: 5px 10px;
     cursor: pointer;
     transition: .6s all;
     -webkit-box-shadow: -11px 7px 9px -3px rgba(0,0,0,0.32);

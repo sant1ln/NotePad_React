@@ -21,22 +21,27 @@ export const ListOfNotes = () => {
     showingNote = true
   }
   
+
+
+   
   return (
+    
     <div className="ListNotes">
       {state.win && <CreateNote 
-        titleNote={title} 
-        bodyNote={body}
-        id={id}
-        showingNote={showingNote}
-        />}
-        {cart.map(note=>(
-          <Note key={note.id}
-          title={note.title}
-          body={note.body}
-          id={note.id}
-          />
-        ))}
-      
+          titleNote={title} 
+          bodyNote={body}
+          id={id}
+          showingNote={showingNote}
+          />}
+          {cart.map(note=>(
+            <Note key={note.id}
+            title={note.title}
+            body={note.body}
+            id={note.id}
+            />
+          ))}
+          
     </div>
+          
   );
 };
