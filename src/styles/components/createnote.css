@@ -121,3 +121,10 @@
 .delete:hover{
     background-color: #000;
 }
+
+@media screen and (max-width: 500px){
+    .ListNotes-create{
+        top: 170px;
+        width: 85%;
+    }
+}

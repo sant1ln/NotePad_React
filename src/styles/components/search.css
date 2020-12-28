@@ -32,3 +32,9 @@
 .search-container form input::placeholder{
     color: var(--font-dummy-colors);
 }
+
+@media screen and (max-width:500px){
+    .search-container form{
+        width: 80%;
+    }
+}

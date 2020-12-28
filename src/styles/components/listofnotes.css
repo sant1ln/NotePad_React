@@ -17,3 +17,10 @@
 .ListNotes::-webkit-scrollbar-thumb{
     background-color:var(--sidebar-color);
 }
+
+@media screen and (max-width: 500px){
+    .ListNotes{
+        flex-direction: column;
+        height: auto;
+    }
+}

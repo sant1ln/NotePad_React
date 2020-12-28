@@ -26,3 +26,16 @@
     width: 90%;
     height: 80vh;
 }
+
+@media screen and (max-width: 500px){
+    
+    .main-content{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-content-list{
+        width: 100%;
+        overflow-y: scroll;
+    }
+}

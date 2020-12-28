@@ -30,6 +30,7 @@ export const ListOfNotes = () => {
           id={id}
           showingNote={showingNote}
           />}
+      
       {
         (searched.length>=1)
         ?
