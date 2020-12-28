@@ -8,7 +8,7 @@ import { Note } from "./Note";
 export const ListOfNotes = () => {
     
   const {state} = useData()
-  const {cart} = state
+  const {cart,searched} = state
   let title = ''
   let body = ''
   let id = ''
@@ -20,13 +20,10 @@ export const ListOfNotes = () => {
     id = temporal.id
     showingNote = true
   }
-  
-
-
-   
+     
   return (
     
-    <div className="ListNotes">
+    <div className="ListNotes ">
       {state.win && <CreateNote 
           titleNote={title} 
           bodyNote={body}
@@ -34,6 +31,16 @@ export const ListOfNotes = () => {
           showingNote={showingNote}
           />}
       {
+        (searched.length>=1)
+        ?
+        searched.map(note=>(
+          <Note key={note.id}
+          title={note.title}
+          body={note.body}
+          id={note.id}
+          />
+        ))
+        :
         cart.map(note=>(
           <Note key={note.id}
           title={note.title}

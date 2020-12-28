@@ -10,7 +10,7 @@ export const Home = () => {
   const { actualState } = useData();
   return (
     <div className="main">
-      <div className={`${(actualState === 'showing')? 'overide' : ''}`}></div>
+      <div className={`${(actualState === 'showing' || actualState === 'creating' )? 'overide' : ''}`}></div>
       <Sidebar />
       <div className="main-content">
         <Search />

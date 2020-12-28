@@ -41,17 +41,21 @@ export const cartsReducer = (state,action) => {
                 ...state,
                 ...action.payload,
                 temporal: [],
-                actual: 'showing all'
             }
-        /* case 'SEARCH':
+        case 'SEARCH':
             return{
                 ...state,
-                cart:[] ,
-                searched: state.cart.filter((note) => note.title.includes(action.payload)),
+                searched: state.cart.filter((note) => note.title.toLowerCase().includes(action.payload)),
                 temporal: [],
                 actual: 'showing all'
-            } */
-        
+            }
+        case 'RESET':
+            return{
+                ...state,
+                searched: [],
+                temporal: [],
+                actual: 'showing all'
+            }
         default:
             return{
                 state

@@ -6,6 +6,7 @@ export const Search = () => {
     const {searchNote} = useData()
     const [searchValue, setSearchValue] = useState('')
     const HandleChange = (e) =>{
+        searchNote(e.target.value)
         setSearchValue(e.target.value);
     }
 

@@ -27,7 +27,7 @@ export const CreateNote = ({ titleNote, bodyNote, showingNote,id }) => {
   }
 
   return (
-    <div className="ListNotes-create">
+    <div className="ListNotes-create animate__animated animate__fadeInLeft">
       <form className="form-create" >
         <div className="form-create-input">
           <input

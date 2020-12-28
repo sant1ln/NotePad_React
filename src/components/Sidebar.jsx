@@ -15,7 +15,7 @@ export const Sidebar = () => {
             </div>
             <div className="sidebar-control">
                 <button 
-                onClick={toggleWindow}
+                onClick={()=>toggleWindow('creating')}
                 className="sidebar-control-btn">
                     <h3>Create note +</h3></button>
                 <hr/>

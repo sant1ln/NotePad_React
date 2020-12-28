@@ -19,12 +19,12 @@ export const useData = () =>{
        })
     }
 
-    const toggleWindow = () =>{
+    const toggleWindow = (option='showing all') =>{
         dispatch({
             type: 'TOGGLE_WINDOW',
             payload:{
                 win: !win,
-                actual: 'create' 
+                actual: option 
             }
         })
     }
@@ -54,19 +54,18 @@ export const useData = () =>{
         })
     }
     
-    /* const searchNote = (searchWord) =>{
+    const searchNote = (searchWord) =>{
         if(searchWord){
             dispatch({
                 type: 'SEARCH',
-                payload: searchWord
+                payload: searchWord.toLowerCase()
             })
         }else{
             dispatch({
                 type: 'RESET'
             })
         }
-        
-    } */
+    }
 
 
     return{
@@ -75,6 +74,7 @@ export const useData = () =>{
         showNote,
         editNote,
         deleteNote,
+        searchNote,
         actualState,
         state,
     }
