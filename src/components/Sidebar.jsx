@@ -24,9 +24,11 @@ export const Sidebar = () => {
                
                 {
                    
-                    cart.map(({id,title}) =>(
+                    cart.map(({id,title,body}) =>(
                         <div key={id}>
                             <DummyNotes
+                                id={id}
+                                body={body} 
                                 title={title}
                             />
                         </div>

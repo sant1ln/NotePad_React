@@ -43,6 +43,15 @@ export const cartsReducer = (state,action) => {
                 temporal: [],
                 actual: 'showing all'
             }
+        /* case 'SEARCH':
+            return{
+                ...state,
+                cart:[] ,
+                searched: state.cart.filter((note) => note.title.includes(action.payload)),
+                temporal: [],
+                actual: 'showing all'
+            } */
+        
         default:
             return{
                 state

@@ -33,13 +33,18 @@ export const ListOfNotes = () => {
           id={id}
           showingNote={showingNote}
           />}
-          {cart.map(note=>(
-            <Note key={note.id}
-            title={note.title}
-            body={note.body}
-            id={note.id}
-            />
-          ))}
+      {
+        cart.map(note=>(
+          <Note key={note.id}
+          title={note.title}
+          body={note.body}
+          id={note.id}
+          />
+        ))
+        
+      }
+        
+          
           
     </div>
           

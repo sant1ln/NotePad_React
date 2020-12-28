@@ -54,6 +54,21 @@ export const useData = () =>{
         })
     }
     
+    /* const searchNote = (searchWord) =>{
+        if(searchWord){
+            dispatch({
+                type: 'SEARCH',
+                payload: searchWord
+            })
+        }else{
+            dispatch({
+                type: 'RESET'
+            })
+        }
+        
+    } */
+
+
     return{
         toggleWindow,
         createNewNote,
