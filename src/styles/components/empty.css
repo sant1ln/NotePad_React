@@ -1,0 +1,28 @@
+.container_empty{
+    display: flex;
+    justify-content: center;
+}
+
+
+.container_empty img{
+    width: 30%;
+}
+
+.container_empty-text{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    font-size: 4rem;
+}
+
+.container_empty-text button{
+    width: 50%;
+    border-radius: 5px;
+    border: none;
+    background-color:var(--sidebar-color);
+    cursor: pointer;
+}
+
+.container_empty-text button:hover{
+    background-color: rgba(255, 0, 0, 0.774);
+}

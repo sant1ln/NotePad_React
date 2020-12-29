@@ -43,5 +43,7 @@
 @media screen and (max-width: 500px){
     .note{
         max-width: 80%;
+        min-width: 80%;
+        min-height: 170px;
     }
 }

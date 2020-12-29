@@ -56,6 +56,11 @@ export const cartsReducer = (state,action) => {
                 temporal: [],
                 actual: 'showing all'
             }
+        case 'TOGGLE_SIDEBAR':
+            return{
+                ...state,
+                sidebar: action.payload
+            }
         default:
             return{
                 state

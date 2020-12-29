@@ -10,6 +10,10 @@
     overflow-x: hidden;
 }
 
+.exit-btn{
+    display: none;
+}
+
 .sidebar::-webkit-scrollbar{
     width: 5px;
 }
@@ -61,6 +65,24 @@
 
 @media screen and (max-width: 500px){
     .sidebar{
+        position: absolute;
+        left:0;
+        width: 60%;
+        z-index: 2;
+    }
+    .sidebar-title{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .exit-btn{
+        display: block;
+    }
+    .show{
+        display: flex;
+    }
+    .hide{
         display: none;
     }    
 }

@@ -4,14 +4,20 @@ import '../styles/components/sidebar.css'
 import { useData } from '../Hooks/useData'
 
 export const Sidebar = () => {
-    const {state,toggleWindow} = useData() 
+    const {state,toggleWindow,toggleSidebar} = useData() 
     const {cart} = state
-    
+    const {sidebar} = state
+    const closeModal = () =>{
+        toggleSidebar(false)
+    }
    /*  const {state} = cart */
     return (
-        <div className="sidebar">
+        <div className={`sidebar ${(sidebar)? 'show' : 'hide' }`}>
             <div className="sidebar-title">
                 <h1>React Notes</h1>
+                <i className="far fa-times-circle exit-btn"
+                onClick={closeModal}
+                ></i>
             </div>
             <div className="sidebar-control">
                 <button 

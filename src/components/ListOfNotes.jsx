@@ -3,6 +3,7 @@ import { useData } from "../Hooks/useData";
 //import { useData } from "../Hooks/useData";
 import "../styles/components/listofnotes.css";
 import { CreateNote } from "./CreateNote";
+import { Empty } from "./Empty";
 import { Note } from "./Note";
 
 export const ListOfNotes = () => {
@@ -21,6 +22,8 @@ export const ListOfNotes = () => {
     showingNote = true
   }
      
+
+
   return (
     
     <div className="ListNotes ">
@@ -30,6 +33,10 @@ export const ListOfNotes = () => {
           id={id}
           showingNote={showingNote}
           />}
+
+      {(cart.length === 0) &&
+        <Empty />
+      }
       
       {
         (searched.length>=1)

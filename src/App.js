@@ -7,15 +7,8 @@ import { cartsReducer } from './Reducer/cartsReducer';
 
 function App() {
 
-  /* const initialState = ({
-    cart: [],
-    temporal: [],
-    win: false,
-    actual: null
-  }) */
-
   const [state, dispatch] = useReducer(cartsReducer, initialState)
-  /* const {actualState} = useData() */
+  
   return (
     <CardContext.Provider value={{state,dispatch}}>
       <div >

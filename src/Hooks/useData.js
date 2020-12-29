@@ -6,6 +6,7 @@ export const useData = () =>{
     const {state,dispatch} = useContext(CardContext)  
     const {win} = state
     const actualState = state.actual;
+    
     const createNewNote = (data) =>{
        let idMaker = Math.round(Math.random()*5000)
        
@@ -66,7 +67,9 @@ export const useData = () =>{
             })
         }
     }
-
+    const toggleSidebar = (toggle) =>{
+        dispatch({type: 'TOGGLE_SIDEBAR',payload: toggle})
+    }
 
     return{
         toggleWindow,
@@ -75,6 +78,7 @@ export const useData = () =>{
         editNote,
         deleteNote,
         searchNote,
+        toggleSidebar,
         actualState,
         state,
     }
